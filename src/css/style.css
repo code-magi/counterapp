@@ -1,0 +1,295 @@
+/*Remove scroll bar but still allow scrolling*/
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/*Remove outline input*/
+*:focus {
+  outline: none;
+}
+
+/*IE9*/
+*::selection {
+  background-color: transparent;
+}
+*::-moz-selection {
+  background-color: transparent;
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  /*IE10*/
+  -ms-user-select: none;
+  user-select: none;
+
+  /*You just need this if you are only concerned with android and not desktop browsers.*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input[type='text'],
+textarea,
+[contenteditable] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/*Controls Nav*/
+.controls-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #e8e7e2;
+  z-index: 9999;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: inset 0 7em 10em -5em rgba(255, 255, 255, 0.5),
+    0 0.3em 0.5em -0.2em rgba(100, 100, 100, 0.4);
+}
+
+.btn-controls {
+  background-color: #adadad;
+  box-shadow: inset 0 7em 10em -5em rgba(255, 255, 255, 0.5),
+    0 0.3em 0.5em -0.2em rgba(100, 100, 100, 0.4);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  color: #4e4e4e;
+  font-size: 12px;
+  padding: 7px 18px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+.btn-controls:hover {
+  background-color: #9c9c9c;
+  color: #252525;
+}
+
+/*Content Body*/
+.content {
+  padding-top: 70px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background: white;
+}
+
+/*Counter*/
+.counterHolder {
+  margin: auto;
+  position: relative;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: inset 0 7em 10em -5em rgba(255, 255, 255, 0.5),
+    0 0.3em 0.5em -0.2em rgba(100, 100, 100, 0.4),
+    0 1em 2em -0.75em rgba(100, 100, 100, 0.35),
+    0 1em 3em -0.5em rgba(100, 100, 100, 0.2),
+    0px 0px 8px -1px rgba(0, 0, 0, 0.2);
+}
+
+.counterHolder:hover {
+  -moz-transform: scale(1.01) translate(0px, -4px);
+  -webkit-transform: scale(1.01) translate(0px, -4px);
+  -o-transform: scale(1.01) translate(0px, -4px);
+  -ms-transform: scale(1.01) translate(0px, -4px);
+  transform: scale(1.01) translate(0px, -4px);
+  box-shadow: inset 0 7em 10em -5em rgba(255, 255, 255, 0.5),
+    0 0.3em 0.5em -0.2em rgba(100, 100, 100, 0.2),
+    0 1em 2em -0.75em rgba(100, 100, 100, 0.35),
+    0 1em 3em -0.5em rgba(100, 100, 100, 0.2),
+    0px 0px 8px -1px rgba(0, 0, 0, 0.2);
+}
+
+.text-input-box {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.text-input-box:focus {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+.icon-dark-pink {
+  font-size: 18px;
+  color: #cc429e;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.icon-dark-pink:hover {
+  color: #bb3b90;
+  text-shadow: none;
+}
+
+.icon-light-pink {
+  font-size: 18px;
+  color: #d296ca;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.icon-light-pink:hover {
+  color: #c88cc1;
+  text-shadow: none;
+}
+
+.icon-blue {
+  font-size: 18px;
+  color: #73bfc8;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.icon-blue:hover {
+  color: #6eb5be;
+  text-shadow: none;
+}
+
+.icon-dark-blue {
+  font-size: 18px;
+  color: #4e98dc;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.icon-dark-blue:hover {
+  color: #4082bf;
+  text-shadow: none;
+}
+
+.icon-green {
+  font-size: 18px;
+  color: #6cd18f;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.icon-green:hover {
+  color: #63c584;
+  text-shadow: none;
+}
+
+.icon-purple {
+  font-size: 18px;
+  color: #8768cf;
+  cursor: pointer;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.icon-purple:hover {
+  color: #7e60c3;
+  text-shadow: none;
+}
+
+/* .icons {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+} */
+
+.icon-reset {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 20px;
+}
+
+.icon-trash {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+}
+
+.icon-status {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 18px;
+}
+
+.confirm-ui {
+  text-align: center;
+}
+
+.textCounter {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-shadow: 0px 2px 9px rgba(85, 85, 85, 0.7);
+  cursor: pointer;
+}
+
+.addsub {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+}
+
+.number {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 60px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-shadow: 0px 2px 9px rgba(85, 85, 85, 0.7);
+  cursor: default;
+  line-height: 60px;
+}
+
+/*Confrim screen for delete all and reset all*/
+
+.button-confirm {
+  background-color: #adadad;
+  box-shadow: inset 0 7em 10em -5em rgba(255, 255, 255, 0.5),
+    0 0.3em 0.5em -0.2em rgba(100, 100, 100, 0.4);
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  color: #4e4e4e;
+  font-size: 12px;
+  padding: 7px 18px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.button-confirm:hover {
+  background-color: #9c9c9c;
+  color: #252525;
+}
+
+.confirm-text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
